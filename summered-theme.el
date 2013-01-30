@@ -62,12 +62,14 @@
       (summered-red+2     "#cd3f14")
       (summered-red+3     "#da583e")
       (summered-red+4     "#cf6a4c")
+      (summered-red+5     "#ef9a7c")
       (summered-orange-2  "#ad581f")
       (summered-orange-1  "#c36322")
       (summered-orange    "#dd7b3b")
       (summered-orange+1  "#fd9b3b")
       (summered-orange+2  "#ffb55b")
       (summered-yellow-8  "#4a410d")
+      (summered-yellow-3  "#c5af75")
       (summered-yellow-2  "#e9c062")
       (summered-yellow-1  "#dad085")
       (summered-yellow    "#ece193")
@@ -79,10 +81,10 @@
       (summered-green+2   "#8ac270")
       (summered-green+3   "#99c982")
       (summered-green+4   "#a7d194")
-      (summered-cyan-2    "#6C7C93")
-      (summered-cyan-1    "#8b98ab")
-      (summered-cyan      "#7694A2")
-      (summered-cyan      "#80B2CB")
+      (summered-cyan-4    "#6C7C93")
+      (summered-cyan-3    "#8b98ab")
+      (summered-cyan-2    "#7694A2")
+      (summered-cyan-1    "#80B2CB")
       (summered-cyan      "#A5D9F3")
       (summered-blue+3    "#9ed1fa")
       (summered-blue+2    "#6eb9f7")
@@ -96,8 +98,7 @@
       (summered-magenta   "#9b859d")
       (summered-magenta+1 "#B594B8")
       (summered-magenta+2 "#C8A9CB"))
-  (custom-theme-set-faces
-   'summered
+  (custom-theme-set-faces 'summered
    '(button ((t (:underline t))))
    `(link ((,class (:foreground ,summered-yellow :underline t :weight bold))))
    `(link-visited ((,class (:foreground ,summered-yellow-2
@@ -175,18 +176,20 @@
    `(font-lock-builtin-face ((,class (:foreground ,summered-orange))))
    `(font-lock-comment-face ((,class (:foreground ,summered-fg-3))))
    `(font-lock-comment-delimiter-face ((,class (:foreground ,summered-fg-3))))
-   `(font-lock-constant-face ((,class (:foreground ,summered-green+3))))
+   `(font-lock-constant-face ((,class (:foreground ,summered-green+2
+                                                   :weight bold))))
    `(font-lock-doc-face ((,class (:foreground ,summered-magenta+2))))
    `(font-lock-doc-string-face ((,class (:foreground ,summered-magenta))))
    `(font-lock-function-name-face ((,class (:foreground ,summered-yellow-2
-                                                        :weight) bold)))
+                                                        :weight bold))))
    `(font-lock-keyword-face ((,class (:foreground ,summered-red+4
                                                   :weight bold))))
    `(font-lock-reference-face ((,class (:foreground ,summered-cyan-1))))
    `(font-lock-negation-char-face ((,class (:foreground ,summered-fg))))
    `(font-lock-preprocessor-face ((,class (:foreground ,summered-fg-1))))
    `(font-lock-string-face ((,class (:foreground ,summered-green))))
-   `(font-lock-type-face ((,class (:foreground ,summered-yellow))))
+   `(font-lock-type-face ((,class (:foreground ,summered-yellow-3
+                                               :weight bold))))
    `(font-lock-variable-name-face ((,class (:foreground ,summered-blue))))
    `(font-lock-warning-face ((,class (:foreground ,summered-fg+1
                                       :background ,summered-red-3
@@ -428,11 +431,9 @@
    `(nav-face-hfile ((,class (:foreground ,summered-red-3))))
 
    ;; org-mode
-   `(org-agenda-date-today
-     ((,class (:foreground "white" :slant italic :weight bold))) t)
-   `(org-agenda-structure
-     ((,class (:inherit font-lock-comment-face))))
-   `(org-archived ((,class (:foreground ,summered-fg :weight bold))))
+   `(org-agenda-date-today ((,class (:foreground "white" :slant italic :weight bold))) t)
+   `(org-agenda-structure ((,class (:inherit font-lock-comment-face))))
+   `(org-archived ((,class (:foreground ,summered-bg+3 :weight bold))))
    `(org-checkbox ((,class (:background ,summered-bg+2 :foreground "white"
                                         :box (:line-width 1 :style released-button)))))
    `(org-date ((,class (:foreground ,summered-cyan-2 :underline t))))
@@ -440,9 +441,9 @@
    `(org-formula ((,class (:foreground ,summered-yellow-2))))
    `(org-headline-done ((,class (:foreground ,summered-green+3))))
    `(org-hide ((,class (:foreground ,summered-bg-1))))
-   `(org-level-1 ((,class (:foreground ,summered-orange+2 :weight bold))))
+   `(org-level-1 ((,class (:foreground ,summered-yellow :weight bold))))
    `(org-level-2 ((,class (:foreground ,summered-blue+1))))
-   `(org-level-3 ((,class (:foreground ,summered-red+2))))
+   `(org-level-3 ((,class (:foreground ,summered-red+4))))
    `(org-level-4 ((,class (:foreground ,summered-fg-3))))
    `(org-level-5 ((,class (:foreground ,summered-yellow+1))))
    `(org-level-6 ((,class (:foreground ,summered-green-1))))
@@ -452,11 +453,11 @@
    `(org-scheduled ((,class (:foreground ,summered-green+4))))
    `(org-scheduled-previously ((,class (:foreground ,summered-red-3))))
    `(org-scheduled-today ((,class (:foreground ,summered-blue+1))))
-   `(org-special-keyword ((,class (:foreground ,summered-fg+1))))
-   `(org-table ((,class (:foreground ,summered-fg-1))))
+   `(org-special-keyword ((,class (:foreground ,summered-fg-3))))
+   `(org-table ((,class (:foreground ,summered-fg-2))))
    `(org-tag ((,class (:bold t :weight bold))))
    `(org-time-grid ((,class (:foreground ,summered-orange))))
-   `(org-todo ((,class (:bold t :foreground ,summered-red+4 :weight bold))))
+   `(org-todo ((,class (:bold t :foreground ,summered-red+5 :weight bold))))
    `(org-done ((,class (:bold t :foreground ,summered-green+3 :weight bold))))
    `(org-upcoming-deadline ((,class (:inherit font-lock-keyword-face))))
    `(org-warning ((,class (:bold t :foreground ,summered-red :weight bold))))
@@ -555,12 +556,19 @@
    `(which-func ((,class (:foreground ,summered-green+1))))
 
   ;;; custom theme variables
-   (custom-theme-set-variables
-    'summered
-    `(ansi-color-names-vector [,summered-bg ,summered-red ,summered-green ,summered-yellow
-                                            ,summered-blue ,summered-magenta ,summered-cyan ,summered-fg])
-    ;; fill-column-indicator
-    `(fci-rule-color ,summered-bg-05))))
+   )
+  (custom-theme-set-variables
+   'summered
+   `(ansi-color-names-vector [,summered-bg
+                              ,summered-red
+                              ,summered-green
+                              ,summered-yellow
+                              ,summered-blue
+                              ,summered-magenta
+                              ,summered-cyan
+                              ,summered-fg])
+   ;; fill-column-indicator
+   `(fci-rule-color ,summered-bg+3)))
 
 ;;;autoload
 (when load-file-name
