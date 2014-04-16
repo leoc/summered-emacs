@@ -21,21 +21,21 @@
 
 ;;; Commentary:
 ;;
-;; A nice summer feeling color theme for emacs heavily inspired by Sunburst.
+;; A nice summer feeling color theme for Emacs heavily inspired by Sunburst.
 ;;
 ;;; Installation:
 ;;
-;;   Just drop the summered-emacs.el somewhere that the emacs
+;;   Just drop the summered-emacs.el somewhere that the Emacs
 ;; `load-theme` command can find it.
 ;;
 ;; Don't forget that the theme requires Emacs 24.
 ;;
-;;; Credits
+;;; Credits:
 ;;
 ;;   Soryu created the Sunburst Colortheme for TextMate which
 ;; summered is based on.
 ;;
-;;; Code
+;;; Code:
 
 ;; TODO: Build everything on the base colors and the color package
 (require 'color)
@@ -568,4 +568,4 @@
 ;; no-byte-compile: t
 ;; End:
 
-;;; summered-theme.el ends here.
+;;; summered-theme.el ends here
