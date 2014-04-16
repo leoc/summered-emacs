@@ -37,6 +37,8 @@
 ;;
 ;;; Code
 
+(require 'color)
+
 (deftheme summered "The Summered color theme")
 
 (let ((class '((class color) (min-colors 89)))
@@ -522,6 +524,13 @@
    `(whitespace-indentation ((,class (:background ,summered-yellow :foreground ,summered-red))))
    `(whitespace-empty ((,class (:background ,summered-yellow :foreground ,summered-red))))
    `(whitespace-space-after-tab ((,class (:background ,summered-yellow :foreground ,summered-red))))
+
+   ;; company-mode
+   `(company-tooltip ((t (:inherit default :background ,(color-lighten-name summered-bg 2)))))
+   `(company-scrollbar-bg ((t (:background ,(color-lighten-name summered-bg 10)))))
+   `(company-scrollbar-fg ((t (:background ,(color-lighten-name summered-bg 5)))))
+   `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+   `(company-tooltip-common ((t (:inherit font-lock-constant-face))))
 
    ;; mu4e specific colors
    `(mu4e-flagged-face ((t (:inherit font-lock-constant-face :foreground ,summered-red :weight bold))))
