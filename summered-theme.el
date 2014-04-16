@@ -113,8 +113,9 @@
    `(header-line ((,class (:foreground ,summered-fg+1
                                        :background ,summered-bg-1
                                        :box (:line-width -1
-                                             :style released-button)))))
-   `(highlight ((,class (:background ,summered-bg+1))))
+                                                         :style released-button)))))
+   `(highlight-current-line-face ((,class (:background ,summered-bg+05))))
+   `(highlight ((,class (:background ,summered-bg+05))))
    `(highline-face ((,class (:background ,summered-yellow-8))))
 
    ;;; compilation
@@ -343,9 +344,6 @@
 
    ;; helm
    `(helm-selection ((,class (:background ,summered-bg-1))))
-
-   ;; hl-line-mode
-   `(hl-line-face ((,class (:background ,summered-bg-1))))
 
    ;; ido-mode
    `(ido-first-match ((,class (:foreground ,summered-fg+1 :weight bold))))
