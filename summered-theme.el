@@ -434,6 +434,7 @@
    ;; org-mode
    `(org-agenda-date-today ((,class (:foreground "white" :slant italic :weight bold))) t)
    `(org-agenda-structure ((,class (:inherit font-lock-comment-face))))
+   `(org-agenda-restriction-lock ((,class (:background ,summered-bg+1))))
    `(org-archived ((,class (:foreground ,summered-bg+3 :weight bold))))
    `(org-checkbox ((,class (:background ,summered-bg+2 :foreground "white"
                                         :box (:line-width 1 :style released-button)))))
