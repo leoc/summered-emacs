@@ -522,39 +522,16 @@
    `(whitespace-empty ((,class (:background ,summered-yellow :foreground ,summered-red))))
    `(whitespace-space-after-tab ((,class (:background ,summered-yellow :foreground ,summered-red))))
 
-   ;; wanderlust
-   `(wl-highlight-folder-few-face ((,class (:foreground ,summered-red-2))))
-   `(wl-highlight-folder-many-face ((,class (:foreground ,summered-red-1))))
-   `(wl-highlight-folder-path-face ((,class (:foreground ,summered-orange))))
-   `(wl-highlight-folder-unread-face ((,class (:foreground ,summered-blue))))
-   `(wl-highlight-folder-zero-face ((,class (:foreground ,summered-fg))))
-   `(wl-highlight-folder-unknown-face ((,class (:foreground ,summered-blue))))
-   `(wl-highlight-message-citation-header ((,class (:foreground ,summered-red-1))))
-   `(wl-highlight-message-cited-text-1 ((,class (:foreground ,summered-red))))
-   `(wl-highlight-message-cited-text-2 ((,class (:foreground ,summered-green+2))))
-   `(wl-highlight-message-cited-text-3 ((,class (:foreground ,summered-blue))))
-   `(wl-highlight-message-cited-text-4 ((,class (:foreground ,summered-blue+1))))
-   `(wl-highlight-message-header-contents-face ((,class (:foreground ,summered-green))))
-   `(wl-highlight-message-headers-face ((,class (:foreground ,summered-red+1))))
-   `(wl-highlight-message-important-header-contents ((,class (:foreground ,summered-green+2))))
-   `(wl-highlight-message-header-contents ((,class (:foreground ,summered-green+1))))
-   `(wl-highlight-message-important-header-contents2 ((,class (:foreground ,summered-green+2))))
-   `(wl-highlight-message-signature ((,class (:foreground ,summered-green))))
-   `(wl-highlight-message-unimportant-header-contents ((,class (:foreground ,summered-fg))))
-   `(wl-highlight-summary-answered-face ((,class (:foreground ,summered-blue))))
-   `(wl-highlight-summary-disposed-face ((,class (:foreground ,summered-fg
-                                                              :slant italic))))
-   `(wl-highlight-summary-new-face ((,class (:foreground ,summered-blue))))
-   `(wl-highlight-summary-normal-face ((,class (:foreground ,summered-fg))))
-   `(wl-highlight-summary-thread-top-face ((,class (:foreground ,summered-yellow))))
-   `(wl-highlight-thread-indent-face ((,class (:foreground ,summered-magenta))))
-   `(wl-highlight-summary-refiled-face ((,class (:foreground ,summered-fg))))
-   `(wl-highlight-summary-displaying-face ((,class (:underline t :weight bold))))
+   ;; mu4e specific colors
+   `(mu4e-flagged-face ((t (:inherit font-lock-constant-face :foreground ,summered-red :weight bold))))
+   `(mu4e-forwarded-face ((t (:inherit font-lock-builtin-face :foreground ,summered-blue+2 :weight normal))))
+   `(mu4e-header-highlight-face ((t (:inherit region :background "gray11" :underline nil :weight bold))))
+   `(mu4e-replied-face ((t (:inherit font-lock-constant-face :weight normal))))
+   `(mu4e-trashed-face ((t (:inherit font-lock-comment-face :foreground ,summered-bg :strike-through nil))))
+   `(mu4e-unread-face ((t (:inherit font-lock-keyword-face :overline nil :weight bold))))
 
-   `(which-func ((,class (:foreground ,summered-green+1))))
-
+   `(which-func ((,class (:foreground ,summered-green+1)))))
   ;;; custom theme variables
-   )
   (custom-theme-set-variables
    'summered
    `(ansi-color-names-vector [,summered-bg
