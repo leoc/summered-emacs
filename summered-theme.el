@@ -37,6 +37,7 @@
 ;;
 ;;; Code
 
+;; TODO: Build everything on the base colors and the color package
 (require 'color)
 
 (deftheme summered "The Summered color theme")
