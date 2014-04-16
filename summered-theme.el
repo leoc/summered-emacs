@@ -51,6 +51,7 @@
       (summered-bg-1      "#000000")
       (summered-bg-05     "#090909")
       (summered-bg        "#111111")
+      (summered-bg+05     "#151515")
       (summered-bg+1      "#222222")
       (summered-bg+2      "#333333")
       (summered-bg+3      "#444444")
